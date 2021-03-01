@@ -1,0 +1,10 @@
+# jekyll serve
+
+title: "Golk the cook"
+description: >- # this means to ignore newlines until "baseurl:"
+  Ofertas gastronómicas del chef Adrià Rio.
+url: "http://golkthecook.github.io/"
+
+sass:
+  sass_dir: _sass
+  style: compressed

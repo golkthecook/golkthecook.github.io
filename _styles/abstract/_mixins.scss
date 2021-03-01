@@ -1,0 +1,20 @@
+// Chipped corner effect
+@mixin chippedCorner {
+  background-color: $bodyColor;
+  content: "";
+  display: block;
+  height: $chippedCornerSize;
+  position: absolute;
+  transform: rotate(45deg);
+  width: $chippedCornerSize;
+}
+@mixin bottomLeftChippedCorner {
+  @include chippedCorner;
+  left: -$chippedCornerSize/2;
+  bottom: -$chippedCornerSize/2;
+}
+@mixin topRightChippedCorner {
+  @include chippedCorner;
+  right: -$chippedCornerSize/2;
+  top: -$chippedCornerSize/2;
+}

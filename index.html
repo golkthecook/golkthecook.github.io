@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% for product in site.posts %}
+<div class="col-sm-3">
+    {% include product-card.html %}
+</div>
+{% endfor %}
