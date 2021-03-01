@@ -1,4 +1,36 @@
 .btn {
-  border-radius: 0;
   border: none;
+  border-radius: 0;
+  font-weight: $fontWeight_regular;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $fontFamily_title;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  $mainColor: $color_red;
+  $alterColor: lighten($mainColor, 10%);
+  background-color: $mainColor;
+  color: #fff;
+
+  &:not(:hover) {
+    &:before {
+      @include topRightChippedCorner;
+    }
+    &:after {
+      @include bottomLeftChippedCorner;
+    }
+  }
+
+  &:hover {
+    background-color: $alterColor;
+    &:before {
+      @include topRightChippedCorner(1);
+    }
+    &:after {
+      @include bottomLeftChippedCorner(1);
+    }
+  }
 }

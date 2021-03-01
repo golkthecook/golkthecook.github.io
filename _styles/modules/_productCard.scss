@@ -6,9 +6,6 @@
   &:before {
     @include topRightChippedCorner;
   }
-  &:after {
-    @include bottomLeftChippedCorner;
-  }
 
   &__title {
     font-size: 18px;

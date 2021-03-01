@@ -7,14 +7,25 @@
   position: absolute;
   transform: rotate(45deg);
   width: $chippedCornerSize;
+  transition: transform ease .3s;
 }
-@mixin bottomLeftChippedCorner {
+@mixin bottomLeftChippedCorner($off: null) {
   @include chippedCorner;
   left: -$chippedCornerSize/2;
-  bottom: -$chippedCornerSize/2;
+  bottom: -$chippedCornerSize;
+  transform-origin: 100% 0;
+
+  @if $off == null {
+    transform: rotate(0deg);
+  }
 }
-@mixin topRightChippedCorner {
+@mixin topRightChippedCorner($off: null) {
   @include chippedCorner;
   right: -$chippedCornerSize/2;
-  top: -$chippedCornerSize/2;
+  top: -$chippedCornerSize;
+  transform-origin: 0 100%;
+
+  @if $off == null {
+    transform: rotate(0deg);
+  }
 }
